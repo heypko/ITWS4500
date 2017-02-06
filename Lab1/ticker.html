@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tweet Ticker</title>
+  <link rel="stylesheet" href="ticker.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css"><!-- load animate -->
+  <meta name="description" content="Tweet Ticker">
+  <meta name="author" content="Peter Ko">
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="main" class="row">
+      <div id="header" class="row text-center">
+        <div id="logo">
+            <span class="letter animated bounceInLeft">Tweet</span>
+            <span class="letter animated bounceInLeft">Ticker</span>
+        </div>
+      </div>
+      
+      <!-- Tweets -->
+      <div class="sidebar col-sm-5">
+          <nav class="sidebar-nav">
+              <ul id = "tlist">
+                  <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+              </ul>
+          </nav>
+      </div>
+
+      <!-- Hashtags -->
+      <div class="sidebar col-sm-2">
+          <nav class="sidebar-nav">
+              <ul id = "hlist">
+                  <li class="hashbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="hashbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="hashbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="hashbox"><a class="animated bounceInLeft" href="#"></a>
+                  <li class="hashbox"><a class="animated bounceInLeft" href="#"></a>
+              </ul>
+          </nav>
+      </div>
+
+      <!-- More Tweet Info -->
+      <div id="content" class="animated bounceInUp col-sm-5 text-center">
+          <div class="row">
+              <div class="col-sm-5">
+                  <img id="portrait" class="img-responsive animated bounceInUp" src="http://lorempixel.com/500/500/nature">
+                  <span id="username" class="animated bounceInDown">Username</span>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-7">
+              <span id="description" class="animated bounceInDown">Description</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+                <span id="text" class="animated bounceInDown">Text</span>
+            </div>
+          </div>
+      </div>
+    </div>
+</body>
+
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="ticker.js"></script>
+
+</html>

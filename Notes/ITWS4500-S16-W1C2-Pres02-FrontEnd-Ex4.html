@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+    </head>
+    <body>
+    <script>
+      var person1;
+      person = function() {
+        var name;         
+        var score;  
+        this.getName = function() { return name; }
+        this.getScore = function() { return score; }
+        this.setPerson = function(x,y) { name=x; score=y; }
+      }
+      person1 = new person();
+      person1.setPerson('Rick','100');
+ 
+      alert(person1.getName() + ' scored a ' + person1.getScore());
+      alert('Naturally!')
+
+    </script>
+    </body>
+</html>
+
+

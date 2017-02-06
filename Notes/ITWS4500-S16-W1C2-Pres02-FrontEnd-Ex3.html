@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+    </head>
+    <body>
+    <script>
+	var a, b, c, d;
+	a = {};
+	b = new Date();
+	c = new b.constructor();
+	d = new a.constructor();
+	if (a instanceof Date) alert('a-date');
+	if (a instanceof Object) alert('a-object');
+	if (b instanceof Date) alert('b-date');
+            if (b instanceof Object) alert('b-object');
+            if (c instanceof Date) alert('c-date');
+	if (c instanceof Object) alert('c-object');
+	if (d instanceof Date) alert('d-date');
+            if (d instanceof Object) alert('d-object');
+    </script>
+    </body>
+</html>
+
+

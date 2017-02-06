@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>
+
+var foo = 'foo';
+var myObject = {foo: 'I am myObject.foo'};
+
+var sayFoo = function() {
+  console.log(this.foo); 
+};
+
+// give my object a sayFoo property
+
+myObject.sayFoo = sayFoo;
+myObject.sayFoo(); // logs 'I am myObject.foo' 12
+
+sayFoo(); // logs 'foo'
+
+// more to be found at http://net.tutsplus.com/tutorials/javascript-ajax/fully-understanding-the-this-keyword/
+
+</script>
+</body>
+</html>
