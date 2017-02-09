@@ -1,0 +1,129 @@
+body {
+  font-family: 'Noto Sans';
+}
+
+div.ticker {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FEA0A0;
+}
+
+div.hashbox {
+  background-color: #FAFAFA;
+  border: dotted 1px blue;
+  height: 64px;
+  min-width: 370px;
+  margin-top: 5px;
+  border-radius:20px;
+}
+
+li.weatherbox {
+  -webkit-filter: brightness(90%); /* Safari 6.0 - 9.0 */
+  filter: brightness(90%);
+  position: relative;
+	object-fit: cover;
+  z-index: 10;
+  font-size:2em;
+}
+
+li.weatherbox:hover {
+  -webkit-filter: brightness(120%); /* Safari 6.0 - 9.0 */
+  filter: brightness(120%);
+  z-index: 0;
+}
+
+#content {
+  color: #222222;
+  border: 1px solid grey;
+  /*border-left: 1px solid grey;
+  border-top: 1px solid grey;*/
+  /*border:1px solid black;*/
+}
+
+#portrait {
+  clear:right;
+  display:block;
+  margin-bottom:5px;
+  /*background:#AAAAAA;*/
+  font-size: 10em;
+}
+
+#temperature {
+  clear:right;
+  display:block;
+  font-size:3em;
+  font-weight:bold;
+  margin-bottom:5px;
+  text-align:center;
+}
+
+#description {
+  clear:right;
+  display:block;
+  margin-bottom:10px;
+  text-align:center;
+  font-size:2em;
+}
+
+span.time {
+  clear:right;
+  display:block;
+  margin-bottom:10px;
+  text-align:center;
+  font-size:1.5em;
+}
+
+/*
+  Content below used and modified from
+  https://demos.scotch.io/css3-page-landing-animations/one/demos/
+*/
+
+/* BASE
+============================================================================= */
+
+html                            { overflow-y:scroll; }
+body                            { margin-top:40px; }
+
+/* HEADER
+============================================================================= */
+#header                         { margin-bottom:50px; }
+
+    /* logo */
+    #logo                       { color:black; font-family:'Noto Sans'; font-size:80px; margin-bottom:50px; margin-top:50px;}
+    #logo span                  { display:inline-block; }
+    #new                        { color:red; }
+    #crossed                    { text-decoration: line-through; }
+
+/* MAIN NAV
+============================================================================= */
+#main-nav                       { margin-bottom:30px; }
+
+/* SIDEBAR
+============================================================================= */
+.sidebar                        {  }
+
+.sidebar-nav                    {  }
+.sidebar-nav ul                 { list-style:none; padding-left:0; }
+.sidebar-nav li                 {  }
+.sidebar-nav a                  { background:#AAAAAA; color:#FFF; display:block;
+    margin-bottom:10px; padding:5px; padding-left:10px;  height: 48px;
+    border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;
+}
+    .sidebar-nav a:hover        { background:#FFAA00; text-decoration:none; }
+
+/* CONTENT
+============================================================================= */
+#content                        { background:#FFF; min-height:400px; padding:20px;
+    border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;
+}
+#content img                    { border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; }
+
+/* ANIMATIONS
+============================================================================= */
+
+    /* sidebar */
+    .weatherbox                 { animation-delay:0.2s; -moz-animation-delay:0.2s; -webkit-animation-delay:0s; }
+
+    /* content */
+    #content                    { animation-delay:1.5s; -moz-animation-delay:1.5s; -webkit-animation-delay:1.5s; }
+    #content img            { animation-delay:1.5s; -moz-animation-delay:1.5s; -webkit-animation-delay:1.5s; }

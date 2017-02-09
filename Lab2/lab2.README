@@ -1,5 +1,5 @@
 Peter Ko
-Lab 1 README
+Lab21 README
 Tweet Ticker
 
 Copy all files in zip into directory for viewing, open ticker.html.
@@ -19,19 +19,19 @@ what I wanted.
 
 The use of divs was purely for CSS styling where other tags wouldn't make sense.
 
-References Used:
+Resources Used:
 
 Viewing JSON in an organized, colorful tree (super helpful)
 http://www.jsoneditoronline.org/
 
-Basic JSON Review
-http://stackoverflow.com/questions/10463131/jquery-parsing-json-array
+12Hr Date/Format
+http://stackoverflow.com/questions/8888491/how-do-you-display-javascript-datetime-in-12-hour-am-pm-format
 
-Starting Point for HTML/CSS Styling
-https://demos.scotch.io/css3-page-landing-animations/one/demos/
+Erik Flowers' Weather Icons
+https://erikflowers.github.io/weather-icons/
 
-Attributes of elements with Event Handlers
-http://stackoverflow.com/questions/31380945/retrieve-getattribute-of-clicked-element-in-javascript
+Dark Sky Weather API
+https://darksky.net/dev/
 
 Event binding on Dynamic Elements
 http://stackoverflow.com/questions/203198/event-binding-on-dynamically-created-elements
