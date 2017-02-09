@@ -4,20 +4,14 @@ Tweet Ticker
 
 Copy all files in zip into directory for viewing, open ticker.html.
 
-Biggest Challenge: Working with the syntax in timeouts, choosing how to deal
-with parsing JSON information.
+Biggest Challenge: Finding a way to work with the API using HTTPS
 
-At first I was thinking about passing an index back and forth between functions
-and resetting the index when it hit the end of the JSON file. It occurred to me
-that I could just look at it as a queue and always removing data from the front
-while adding to the back.
+Luckily I found this link...
 
-Filtering through bad tweets was also a little annoying. I just used the presence
-of the "limit" key in the corrupt tweets to filter them out. In the future, I
-would probably just look for the presence of all the fields required to display
-what I wanted.
+http://stackoverflow.com/questions/19908553/forecast-api-data-access
 
-The use of divs was purely for CSS styling where other tags wouldn't make sense.
+Which let me grab the data without having to tinker with any additional settings.
+In the future, I probably won't leave implementing the API calls to the end.
 
 Resources Used:
 
@@ -32,6 +26,3 @@ https://erikflowers.github.io/weather-icons/
 
 Dark Sky Weather API
 https://darksky.net/dev/
-
-Event binding on Dynamic Elements
-http://stackoverflow.com/questions/203198/event-binding-on-dynamically-created-elements
