@@ -91,8 +91,8 @@ body                            { margin-top:40px; }
     /* logo */
     #logo                       { color:black; font-family:'Noto Sans'; font-size:80px; margin-bottom:50px; margin-top:50px;}
     #logo span                  { display:inline-block; }
-    #new                        { color:red; }
-    #crossed                    { text-decoration: line-through; }
+    #new                        { color:#FFAA00; }
+    #crossed                    { text-decoration: line-through; font-size: 14px; }
 
 /* MAIN NAV
 ============================================================================= */
