@@ -1,0 +1,152 @@
+.sidebar-nav a.red {
+  background: #FF4444;
+}
+
+.sidebar-nav a.blue {
+  background: #4444FF;
+}
+
+div.ticker {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FEA0A0;
+}
+
+li {
+  margin-bottom:-5px;
+  word-wrap: break-word;
+}
+
+li.playerbox {
+  -webkit-filter: brightness(90%); /* Safari 6.0 - 9.0 */
+  filter: brightness(90%);
+  position: relative;
+	object-fit: cover;
+  z-index: 10;
+  font-size:2em;
+  width: 50%;
+  padding: 10px;
+}
+
+li.playerbox:hover {
+  -webkit-filter: brightness(120%); /* Safari 6.0 - 9.0 */
+  filter: brightness(120%);
+  z-index: 0;
+}
+
+img.proPic {
+  height:64px;
+}
+
+#content {
+  color: #222222;
+  border: 1px solid grey;
+  padding-top:10px;
+  /*border-left: 1px solid grey;
+  border-top: 1px solid grey;*/
+  /*border:1px solid black;*/
+}
+
+#portrait {
+  clear:right;
+  display:block;
+  margin-bottom:5px;
+  /*background:#AAAAAA;*/
+  font-size: 10em;
+}
+
+.bigbold {
+  clear:right;
+  display:block;
+  font-size:3em;
+  font-weight:bold;
+  margin-bottom:5px;
+  text-align:center;
+}
+
+#description {
+  clear:right;
+  display:block;
+  margin-bottom:10px;
+  text-align:center;
+  font-size:2em;
+}
+
+span.time {
+  clear:right;
+  display:block;
+  margin-bottom:10px;
+  text-align:center;
+  font-size:1.5em;
+}
+
+/*
+  Content below used and modified from
+  https://demos.scotch.io/css3-page-landing-animations/one/demos/
+*/
+
+/* BASE
+============================================================================= */
+
+html                            { overflow-y:scroll; }
+body                            { margin-top:32px; }
+
+/* HEADER
+============================================================================= */
+#header                         { margin-bottom:32px; }
+
+    /* logo */
+    #logo                       { color:black; font-family:'Noto Sans'; font-size:80px; margin-bottom:32px; margin-top:32px;}
+    #logo span                  { display:inline-block; }
+    #new                        { color:#FFAA00; }
+    .crossed                    { text-decoration: line-through; font-size: 14px; }
+
+/* MAIN NAV
+============================================================================= */
+#main-nav                       { margin-bottom:30px; }
+
+/* SIDEBAR
+============================================================================= */
+.sidebar                        {  }
+
+.sidebar-nav                    {  }
+.sidebar-nav ul                 { list-style:none; padding:0; }
+.sidebar-nav li                 {  }
+.sidebar-nav a                  { background:#AAAAAA; color:#FFF; display:block;
+    margin-bottom:10px; padding:10px; padding-left:10px; max-height:240px;
+    border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+
+}
+    .sidebar-nav a:link         {color: #FFF; text-decoration: none;}      /* unvisited link */
+    .sidebar-nav a:visited      {color: #FFF; text-decoration: none;}   /* visited link */
+    .sidebar-nav a:hover        {color: #FFF; background:#FFAA00; text-decoration:none;}     /* mouse over link */
+    .sidebar-nav a:active       {color: #FFF; background:#FF4400;}    /* selected link */
+    .sidebar-nav img            {border: 2px solid #444444;}
+
+/* CONTENT
+============================================================================= */
+#content                        { background:#FFF; min-height:400px; margin-top:20px;
+    border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;
+}
+
+#content img                    { border-color: black; border-radius:2px;
+                                  -moz-border-radius:2px; -webkit-border-radius:2px; }
+
+/* ANIMATIONS
+============================================================================= */
+
+/* sidebar */
+.playerbox                 { animation-delay:0.2s; -moz-animation-delay:0.2s; -webkit-animation-delay:0s; }
+
+/* content */
+#content                    { animation-delay:1.5s; -moz-animation-delay:1.5s; -webkit-animation-delay:1.5s; }
+#content img            { animation-delay:1.5s; -moz-animation-delay:1.5s; -webkit-animation-delay:1.5s; }
+
+/* MEDIA QUERY ADJUSTMENT
+============================================================================= */
+@media only screen and (max-width: 767px) {
+  .crossed  { display: none; }
+  #header   { margin-bottom: 5px; }
+  #logo     { margin-top: 10px; margin-bottom: 10px; }
+  li.playerbox { width: 100%; }
+}
