@@ -4,11 +4,25 @@ Pickup Picker
 
 Copy all files in zip into directory for viewing, open owtracker.html.
 
-For this assignment, I converted Lab2 to use angular. I also used the formatting from an unofficial API for Overwatch. The API actually takes player profile pages from playoverwatch.com and parses the page into JSON. Due to the long request times, I saved the API output into local JSON files and displayed the static data. I plan on using current, updated stats when we have more experience with Node.
+For this assignment, I converted Lab2 to use angular. I also used the formatting
+from an unofficial API for Overwatch. The API actually takes player profile pages
+from playoverwatch.com and parses the page into JSON. Due to the long request times,
+I saved the API output into local JSON files and displayed the static data.
+I plan on using current, updated stats when we have more experience with Node.
+
+For the media query, I ran a check on screen size to put all items into a single
+column if it got too clustered.
+
+I added an angular class toggle for changing colors of the player boxes. Since there are
+corresponding team colors in the game, these colors can be changed to reflect the
+teams we draft on our pickup nights.
 
 Biggest Challenge: Learning Angular
 
-Angular was not easy for me to figure out. Angular has a lot of features that I do not know about. If I ever had a difficult time doing something, there was definitely some easy way to do it with Angular that I had not yet come to terms with (see owtracker.js - old vs owtracker2.js - new).
+Angular was not easy for me to figure out. Angular has a lot of features that I
+do not know about. If I ever had a difficult time doing something, there was
+definitely some easy way to do it with Angular that I had not yet come to terms
+with (see owtracker.js - old vs owtracker2.js - new).
 
 Resources Used:
 
@@ -23,4 +37,3 @@ owapi.net
 
 stackoverflow.com
 AngularJS.org
-
