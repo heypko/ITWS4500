@@ -12,7 +12,6 @@ var client = new Twitter({
     consumer_secret: 'Rmg1DEcgS5DzTNIXStmrsZbuHCjr8mOZ451H5wSaECWEgAPMCP',
     access_token_key: '2736947939-acYvcIAOAn5nt6lpKBMoj1s4oeG2MUS3eEEQMwp',
     access_token_secret: 'c6miqrlojGFamBOjQXTWGHaU2zEgQOoLPomDooQJRYVfJ'
-    //callback: 'http://localhost:3000/'
 });
 
 app.get('/', function (req, res) {
@@ -41,34 +40,44 @@ io.on('connection', function(socket){
     var searchString = ''; // defualt
     var numTweets = 10; // default
 
-    if (msg[0] != null) {
-      searchString = msg[0];
-    }
+    // Default Search
+    if (msg[0] == null || msg[1] == null) {
+      client.get('search/tweets', {q: "rpi", geocode: "42.72,-73.68,10km", count: numTweets}, function(error, tweets, response) {
+        if(error) throw error;
+        // Bind variable to tweet statuses & send to client
+        mySearch = tweets.statuses;
+        socket.send(mySearch);
+        console.log("Sent Default Search");
 
-    if (msg[1] != null) {
-      numTweets = parseInt(msg[1]);
-    }
-
-    client.get('search/tweets', {count: numTweets, q: searchString}, function(error, tweets, response) {
-      if(error) throw error;
-      //console.log(tweets.statuses);  // The tweets.
-      // console.log(response);  // Raw response object.
-      mySearch = tweets.statuses;
-      socket.send(mySearch);
-      // console.log(mySearch[0].text); // debug
-      console.log("Sent Search");
-
-      var filename = "./latestSearch.json";
-
-      // Write to File
-      fs.writeFile(filename, JSON.stringify(mySearch), (err) => {
-        if (err) throw err;
-        console.log('successfully deleted /tmp/hello');
+        // Write to File
+        var filename = "./latestSearch.json";
+        fs.writeFile(filename, JSON.stringify(mySearch), (err) => {
+          if (err) throw err;
+          console.log('Successfully wrote to latestSearch.json');
+        });
       });
-    });
+    }
+
+    // Targeted Search
+    else {
+      searchString = msg[0];
+      numTweets = parseInt(msg[1]);
+      client.get('search/tweets', {count: numTweets, q: searchString}, function(error, tweets, response) {
+        if(error) throw error;
+        // Bind variable to tweet statuses & send to client
+        mySearch = tweets.statuses;
+        socket.send(mySearch);
+        console.log("Sent Targeted Search");
+
+        // Write to File
+        var filename = "./latestSearch.json";
+        fs.writeFile(filename, JSON.stringify(mySearch), (err) => {
+          if (err) throw err;
+          console.log('Successfully wrote to latestSearch.json');
+        });
+      });
+    }
   });
-
-
 });
 
 

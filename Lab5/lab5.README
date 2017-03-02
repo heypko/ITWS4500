@@ -2,12 +2,17 @@ Peter Ko
 Lab 5 README
 Tweet Talker
 
-node ticker.js
+Running:
+
+Copy all files to desired directory, npm install, npm start
+
+Default search will use geocode of Troy, NY, 10 tweets.
 
 Biggest Challenge: Figuring out which twitter API is the better API
 
 I googled "node twitter api". It's important to not use "node-twitter-api" and look for references
 for "twitter". I know better now.
+
 
 References Used:
 
