@@ -1,37 +1,30 @@
 Peter Ko
-Lab 1 README
-Tweet Ticker
+Lab 5 README
+Tweet Talker
 
-Copy all files in zip into directory for viewing, open ticker.html.
+node ticker.js
 
-Biggest Challenge: Working with the syntax in timeouts, choosing how to deal
-with parsing JSON information.
+Biggest Challenge: Figuring out which twitter API is the better API
 
-At first I was thinking about passing an index back and forth between functions
-and resetting the index when it hit the end of the JSON file. It occurred to me
-that I could just look at it as a queue and always removing data from the front
-while adding to the back.
-
-Filtering through bad tweets was also a little annoying. I just used the presence
-of the "limit" key in the corrupt tweets to filter them out. In the future, I
-would probably just look for the presence of all the fields required to display
-what I wanted.
-
-The use of divs was purely for CSS styling where other tags wouldn't make sense.
+I googled "node twitter api". It's important to not use "node-twitter-api" and look for references
+for "twitter". I know better now.
 
 References Used:
 
 Viewing JSON in an organized, colorful tree (super helpful)
 http://www.jsoneditoronline.org/
 
-Basic JSON Review
-http://stackoverflow.com/questions/10463131/jquery-parsing-json-array
+FS Reference
+https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
 
-Starting Point for HTML/CSS Styling
-https://demos.scotch.io/css3-page-landing-animations/one/demos/
+Twitter API
+https://dev.twitter.com/rest/reference/get/search/tweets
 
-Attributes of elements with Event Handlers
-http://stackoverflow.com/questions/31380945/retrieve-getattribute-of-clicked-element-in-javascript
+NG-Repeat
+https://www.w3schools.com/angular/ng_ng-repeat.asp
 
-Event binding on Dynamic Elements
-http://stackoverflow.com/questions/203198/event-binding-on-dynamically-created-elements
+Angular Input
+http://stackoverflow.com/questions/21040454/get-value-from-input-angularjs
+
+Socket.io Hosting
+https://cdnjs.com/libraries/socket.io
