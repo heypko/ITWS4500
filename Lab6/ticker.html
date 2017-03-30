@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Twitter Translator</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css"><!-- load animate -->
+  <link rel="stylesheet" href="ticker.css">
+  <meta name="description" content="Twitter Translator">
+  <meta name="author" content="Peter Ko">
+</head>
+
+
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl" class="container">
+    <div id="main" class="row">
+      <div id="header" class="row text-center">
+        <div id="logo">
+          <span class="letter animated bounceInLeft">Twitter</span>
+          <span class="letter animated bounceInLeft">Translator</span>
+        </div>
+      </div>
+
+      <div id="form" class="row text-center">
+        <form action="" id="tweetSearch">
+          <input id="searchBar" ng-model="query" autocomplete="off" placeholder="Find..."/>
+          <input id="tweetNumber" ng-model="number" autocomplete="off" placeholder="10"/>
+          <button type="button" ng-click="runSearch()" id="query">Search</button>
+        </form>
+
+        <form method="get" action="" id="tweetExport">
+          <select id="dropDown" ng-model="format" ng-options="x for x in types"></select>
+          <a id="exportA" href="downloadJSON"><button type="button" ng-click="runExport()" id="export">Export JSON</button></a>
+          <a id="exportB" href="downloadCSV"><button type="button" ng-click="runExport()" id="export">Export CSV</button></a>
+
+        </form>
+      </div>
+
+      <div class="row text-center">
+        <ul id = "tlist">
+          <li ng-repeat="x in myTweets" class="tweetBox col-xs-12">
+              {{x.text}}
+          </li>
+        </ul>
+      </div>
+    </div>
+</body>
+
+<!--Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="tickerClient.js"></script>
+
+</html>
