@@ -1,0 +1,26 @@
+Peter Ko
+Lab 6 README
+Twitter Translator
+
+Running:
+
+Copy all files to desired directory, npm install, npm start
+
+Q: Where would it be better to place the CSV conversion code, in the node server or in an Angular controller? Why?
+
+A: The node server. Converting the file to JSON on the Node server would then allow further manipulation and movement of the file. If it was done on the client, the file would need to be sent back to the server after conversion.
+
+Had issues with using get requests with expressJS from dropdown. Left it to buttons.
+
+
+References Used:
+
+Viewing JSON in an organized, colorful tree (super helpful)
+http://www.jsoneditoronline.org/
+
+Express Download:
+http://stackoverflow.com/questions/7288814/download-a-file-from-nodejs-server-using-express
+
+
+JSON2CSV:
+https://www.npmjs.com/package/json2csv

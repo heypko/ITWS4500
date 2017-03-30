@@ -11,7 +11,7 @@ var ngapp = angular.module('myApp', ['ng']);
 ngapp.controller('myCtrl', function($scope, $http) {
   $scope.types = ['JSON', 'CSV'];
 
-  
+
   $scope.runSearch = function() {
     var searchOptions = ["search", $scope.query, $scope.number];
     socket.send(searchOptions);
