@@ -25,35 +25,45 @@
       </div>
 
       <div id="form" class="row text-center">
-        <form action="" id="tweetSearch">
-          <input id="searchBar" ng-model="query" autocomplete="off" placeholder="Find..."/>
-          <input id="tweetNumber" ng-model="number" autocomplete="off" placeholder="10"/>
-          <button type="button" ng-click="runSearch()" id="query">Search</button>
+
+
+        <form class="col-xs-6" action="" id="tweetSearch">
+          <div class="col-xs-12" id="searchBar">
+            <input class="form-control" ng-model="query" autocomplete="off" placeholder="Find..."/>
+          </div>
+          <div class="col-xs-3">
+            <input class="form-control" id="tweetNumber" ng-model="number" autocomplete="off" placeholder="10"/>
+          </div>
+          <div class="col-xs-9">
+            <button class="btn btn-block btn-primary" type="button" ng-click="runSearch()" id="query">Search</button>
+          </div>
         </form>
 
-        <form action="" id="setName">
-          <input id="nameBar" ng-model="nameSet" autocomplete="off" placeholder="latestSearch.json, .csv, .xml"/>
-          <button type="button" ng-click="setName()" id="setButton">Set Name</button>
+        <form class="col-xs-6" action="" id="setName">
+          <input class="form-control" id="nameBar" ng-model="nameSet" autocomplete="off" placeholder="latestSearch.json, .csv, .xml"/>
+          <button class="btn btn-block btn-primary" type="button" ng-click="setName()" id="setButton">Set Name</button>
         </form>
 
         <form action="" id="tweetExport">
-          <select onchange="location = this.options[this.selectedIndex].value;">
-              <option value="#">Export Options</option>
-              <option value="/downloadJSON">JSON</option>
-              <option value="/downloadCSV">CSV</option>
-              <option value="/downloadXML">XML</option>
-          </select>​
+          <div class="col-xs-12">
+            <select class="btn btn-lg btn-primary dropdown-toggle-split" id="dropDown" onchange="location = this.options[this.selectedIndex].value;">
+                <option value="#">Download as...</option>
+                <option value="/downloadJSON">JSON</option>
+                <option value="/downloadCSV">CSV</option>
+                <option value="/downloadXML">XML</option>
+            </select>​
+          </div>
         </form>
 
-        <form action="" id ="reset">
-          <button type-"button" action="" value="">Reset</button>
+        <form class="col-xs-12" action="" id ="reset">
+          <button class="btn btn-lg btn-warning" type="button" action="" value="">Reset</button>
         </form>
 
       </div>
 
       <div class="row text-center">
         <ul id = "tlist">
-          <li ng-repeat="x in myTweets" class="tweetBox col-xs-12">
+          <li ng-repeat="x in myTweets" class="tweetBox btn-info col-xs-12">
               {{x.text}}
           </li>
         </ul>

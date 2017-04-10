@@ -125,11 +125,9 @@ io.on('connection', function(socket){
           mySearch = tweets.statuses;
           socket.send(mySearch);
           console.log("Sent Default Search");
-
           var JSONoutput = mySearch;
 
           // Store in DB
-          // collection.insertMany([JSONoutput, csv]);
           collection.save({_id:'recent', JSONoutput}, function(err, result) {
             if (err) throw err;
             console.log("Inserted JSON to mongoDB");
@@ -148,11 +146,9 @@ io.on('connection', function(socket){
           mySearch = tweets.statuses;
           socket.send(mySearch);
           console.log("Sent Targeted Search");
-
           var JSONoutput = mySearch;
 
           // Store in DB
-          // collection.insertMany([JSONoutput, csv]);
           collection.save({_id:'recent', JSONoutput}, function(err, result) {
             if (err) throw err;
             console.log("Inserted JSON to mongoDB");
