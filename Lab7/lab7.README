@@ -1,0 +1,27 @@
+Peter Ko
+Lab 7 README
+Twitter Translator
+
+Running:
+
+Copy all files to desired directory, npm install, npm start
+Make sure mongo server is running on localhost
+
+Biggest hurdle: Figuring out how to read/write entire document from mongoDB
+
+
+References Used:
+
+Viewing JSON in an organized, colorful tree (super helpful)
+http://www.jsoneditoronline.org/
+
+
+
+Overwriting mongoDB collections
+http://stackoverflow.com/questions/26250789/mongodb-db-collection-save-overwrite-object-when-existing
+
+JSON2CSV:
+https://www.npmjs.com/package/json2csv
+
+JSON2XML:
+https://www.npmjs.com/package/json2xml
