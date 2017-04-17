@@ -1,0 +1,30 @@
+Peter Ko
+Lab 8 README
+iGraph Exercises
+
+Relevant files:
+reviews10.csv
+airBostonNodes10.csv
+igraphPicture.png
+
+Running:
+
+Load r project file into rStudio
+
+What dataset did you use and why?
+I used an airbnb listing and review dataset. I wanted to visualize a couple listings and their reviews.
+
+What did you learn about the dataset from your exploration?
+I learned that the airbnb dataset has a lot of information that could be considered "unnecessary" depending on the objective. Host profile information, for example, has many fields that do not help me make a choice when trying to find a place to stay in.
+
+What challenges did you face (due to R, the dataset, or formating), and how did you overcome them?
+Working with the sheer size of the datasets led me to long waiting times. I had to cut down my data to a small fragment of what it once was just to prevent too much clutter on my plot.
+
+R was also difficult due to the seemingly scattered documentation. Combining igraph and normal R syntax was difficult at times. Google was my friend.
+
+
+References Used:
+
+R References
+http://stat.ethz.ch/R-manual/R-devel/library/base/html/ifelse.html
+http://stackoverflow.com/questions/18012222/nested-ifelse-statement-in-r
