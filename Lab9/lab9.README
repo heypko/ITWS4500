@@ -1,0 +1,24 @@
+Peter Ko
+Lab 9 README
+Twitte-REST
+
+Running:
+
+1.Copy source files to desired directory
+
+2.npm install
+
+3.Make sure mongo server is running on localhost
+
+4.npm start
+
+
+
+
+
+References Used:
+
+Viewing JSON in an organized, colorful tree (super helpful)
+http://www.jsoneditoronline.org/
+
+All previous lab references
