@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Twitte-REST</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css"><!-- load animate -->
+  <link rel="stylesheet" href="css/ticker.css">
+  <meta name="description" content="Twitte-REST">
+  <meta name="author" content="Peter Ko">
+</head>
+
+
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl" class="container">
+
+    <div id="main" class="row">
+      <div id="header" class="row text-center">
+        <div id="logo">
+          <span class="letter animated bounceInLeft">Twitte-REST</span>
+        </div>
+      </div>
+
+
+      <div id="form" class="row text-center">
+        <form class="col-xs-6" action="" id="tweetSearch">
+          <div class="col-xs-12" id="searchBar">
+            <input class="form-control" ng-model="query" autocomplete="off" placeholder="Find..."/>
+          </div>
+          <div class="col-xs-3">
+            <input class="form-control" id="tweetNumber" ng-model="number" autocomplete="off" placeholder="10"/>
+          </div>
+          <div class="col-xs-9">
+            <button class="btn btn-block btn-primary" type="button" ng-click="runSearch()" id="query">Search</button>
+          </div>
+        </form>
+
+        <form class="col-xs-6" action="" id="setName">
+          <div class="col-xs-12" id="nameBar">
+            <input class="form-control" id="nameBar" ng-model="nameSet" autocomplete="off" placeholder="latestSearch.json, .csv, .xml"/>
+            <button class="btn btn-block btn-primary" type="button" ng-click="setName()" id="setButton">Set Name</button>
+          </div>
+        </form>
+
+        <a id="visjump" href="visual" class="btn btn-lg btn-primary btn-success" role="button">Visualize Tweets</a>
+
+        <form class="col-xs-12" action="" id="tweetExport">
+          <select class="btn btn-lg btn-primary dropdown-toggle-split" id="dropDown" onchange="location = this.options[this.selectedIndex].value;">
+              <option value="#">Download as...</option>
+              <option value="/downloadJSON">JSON</option>
+              <option value="/downloadCSV">CSV</option>
+              <option value="/downloadXML">XML</option>
+          </select>​
+        </form>
+
+      </div>
+
+      <div id="alert"class="alert alert-info">
+        <strong>Hello!</strong> This site is pretty Twitter, be warned.
+      </div>
+
+      <!-- Lab1 -->
+      <div id="lab1" class="row">
+        <!-- Tweets -->
+        <div class="sidebar col-sm-6">
+          <nav class="sidebar-nav">
+            <ul id="tlist">
+              <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+              <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+              <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+              <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+              <li class="tweetbox"><a class="animated bounceInLeft" href="#"></a>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- More Tweet Info -->
+        <div id="content" class="animated bounceInUp col-sm-6 text-center">
+          <div class="row">
+            <div class="col-sm-5">
+              <img id="portrait" class="img-responsive animated bounceInUp" src="http://lorempixel.com/500/500/nature">
+              <span id="username" class="animated bounceInDown">Username</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <span id="description" class="animated bounceInDown">Description</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <span id="text" class="animated bounceInDown">Text</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+<!--Scripts-->z
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="javascript/tickerClient.js"></script>
+
+</html>

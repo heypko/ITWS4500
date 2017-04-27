@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Twitte-REST Visualization`</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+  <link rel="stylesheet" href="css/visualization.css">
+  <meta name="description" content="Twitte-REST Visualization">
+  <meta name="author" content="Peter Ko">
+</head>
+
+
+<body>
+  <svg class="chart"></svg>
+  <svg id="circles" width="720" height="120">
+    <circle cx="40" cy="60" r="10"></circle>
+    <circle cx="80" cy="60" r="10"></circle>
+    <circle cx="120" cy="60" r="10"></circle>
+  </svg>
+</body>
+
+<!--Scripts-->
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="javascript/d3.layout.cloud.js"></script>
+<script src="javascript/visual.js"></script>
+</html>
